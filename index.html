@@ -54,18 +54,23 @@
 
 
     <!-- HERO SECTION -->
-    <section class="hero">
-        <img src="images/0896389a365eba42a2e4c335240161b5d78d7c5d.jpg" class="hero-img" alt="Luxury Property">
+   <section class="hero">
+    <img src="images/0896389a365eba42a2e4c335240161b5d78d7c5d.jpg" 
+         class="hero-img" 
+         id="mainHeroImage"
+         alt="Luxury Property">
 
-        <div class="hero-thumbnails">
-            <div class="thumb">
-                <img src="images/heroimg1.png" alt="">
-            </div>
-            <div class="thumb">
-                <img src="images/heroimg2.png" alt="">
-            </div>
+    <div class="hero-thumbnails">
+        <div class="thumb">
+            <img src="images/heroimg1.png" 
+                 onclick="changeHero(this)">
         </div>
-    </section>
+        <div class="thumb">
+            <img src="images/heroimg2.png" 
+                 onclick="changeHero(this)">
+        </div>
+    </div>
+</section>
 
     <!-- second  -->
 
@@ -140,8 +145,14 @@
             <!-- Location -->
             <h3 class="section-heading">Location</h3>
             <div class="map">
-                <img src="images/map.png" alt="Map">
-            </div>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d925134.3210715873!2d54.568041327437584!3d25.0745656650172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1772332811667!5m2!1sen!2sin"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
 
             </div>
 
