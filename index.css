@@ -1,0 +1,1629 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Clash Grotesk", sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+/* ================= NAVBAR ================= */
+
+.custom-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    padding-top: 20px; /* keeps the floating look */
+}
+
+.nav-container {
+    width: 88%;
+    max-width: 1400px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    gap: 40px; /* spacing between logo and menu */
+    height: 94px;
+}
+
+/* Logo */
+.logo img {
+    height: 94px;
+    width: 242px;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-left: auto; /* pushes menu + button to right */
+}
+/* ================= DROPDOWN ================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Dropdown Box */
+.dropdown-menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: #ffffff;
+    padding: 15px 0;
+    border-radius: 10px;
+    min-width: 180px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    display: none;
+    flex-direction: column;
+}
+
+.dropdown-menu a {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #111;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background: #f4f4f4;
+}
+
+/* Show on hover (desktop only) */
+@media (min-width: 993px) {
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 992px) {
+
+    .nav-links {
+        display: none; /* Hide menu on tablet/mobile */
+    }
+
+    .list-btn {
+        font-size: 14px;
+        padding: 6px 14px;
+    }
+
+    .hero-thumbnails {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .thumb {
+        width: 160px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .thumb {
+        width: 120px;
+        height: 80px;
+    }
+}
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+}
+/* ================= HAMBURGER ================= */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 2px;
+    background: #111;
+    transition: 0.3s ease;
+}
+
+/* Animate to X */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 992px) {
+
+    /* Center Logo */
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .nav-container{
+        height: 59px;
+    }
+    /* Show Hamburger */
+    .hamburger {
+        display: flex;
+        position: absolute;
+        left: 32px;
+    }
+    .logo img{
+        width: 180px;
+        height: 50px;
+    }
+    /* Hide Desktop Menu */
+    .nav-links {
+        position: absolute;
+        top: 59px; /* same as your navbar height */
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 30px 0;
+        display: none;
+        border-radius: 0 0 14px 14px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    /* Optional: Hide button from desktop area */
+    .list-btn {
+        display: none;
+    }
+}
+
+/* Slide animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Nav Links style */
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: #111;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+/* Button */
+.list-btn {
+    font-family: 'Figtree', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border: 1px solid #111;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #111;
+    transition: 0.3s ease;
+    margin-left: 20px; /* spacing between menu and button */
+}
+
+.list-btn:hover {
+    background:rgba(0, 92, 93, 1);;
+    color: #fff;
+}
+
+
+
+/* ================= HERO ================= */
+
+.index-hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Background video */
+.hero-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Dark overlay */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+/* Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Title */
+.hero-title {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 74px;
+    margin-bottom:70px;
+}
+
+/* ================= SEARCH ================= */
+/* ================= SEARCH ================= */
+
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Tabs positioned top-right */
+.search-tabs {
+    position: absolute;
+    top: -48px;
+    left: 0;
+    display: flex;
+    background: transparent;
+    
+}
+
+/* Tab style */
+.tab {
+    font-family: 'Figtree', sans-serif;
+    font-size: 18px;
+    padding: 14px 28px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+/* Sliding white background */
+.tab-indicator {
+    position: absolute;
+    height: 100%;
+    background: #fff;
+    border-radius: 12px 12px 0 0;
+    transition: 0.3s ease;
+    z-index: 1;
+}
+
+.tab.active {
+    color: #000;
+}
+
+/* Search bar */
+.search-bar {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    padding: 20px;
+    font-size: 18px;
+    outline: none;
+}
+
+.search-btn {
+    background: rgba(0, 92, 93, 1);
+    color: #fff;
+    border: none;
+    padding: 0 40px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+/* ================= FLOATING ICONS ================= */
+
+.floating-icons {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    background: rgba(0, 92, 93, 1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon img {
+    width: 24px;
+}
+
+@media (max-width: 768px) {
+
+    .hero-title {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-btn {
+        width: 100%;
+        padding: 18px;
+    }
+    .floating-icons{
+        display: none;
+    }
+
+    .floating-icons {
+        right: 15px;
+    }
+}
+
+
+
+/* ================= BRAND SECTION ================= */
+
+.brand-section {
+    position: relative;
+    width: 100%;
+    padding: 140px 0;
+    overflow: hidden;
+    text-align: center;
+    height: 100vh;
+}
+
+/* Background image */
+.brand-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Soft white overlay */
+.brand-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgb(255, 255, 255) 0%,
+        rgb(255, 254, 254) 40%,
+        rgba(255, 255, 255, 0.3) 70%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    z-index: 1;
+}
+
+/* Content */
+.brand-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+}
+
+/* Logo */
+.brand-logo {
+    width: 340px; /* adjust if needed */
+    margin-bottom: 30px;
+}
+
+/* Paragraph */
+.brand-text {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0;
+    color: #333;
+}
+@media (max-width: 768px) {
+
+    .brand-section {
+        padding: 100px 0;
+    }
+
+    .brand-logo {
+        width: 110px;
+    }
+
+    .brand-text {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+/* ================= WHO WE ARE ================= */
+
+.who-section {
+    background: #f5f5f5;
+    padding: 120px 0;
+}
+
+.who-container {
+    width: 88%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    /* border: black solid 2px; */
+}
+.who-left {
+    width: 30%;
+}
+
+.who-right {
+    width: 40%;
+     /* border: black solid 2px; */
+     align-items: self-end;
+}
+
+/* LEFT */
+
+.who-title {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 1; /* 100% */
+}
+
+/* RIGHT */
+
+.who-heading {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.who-text {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* Button */
+
+.who-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 1px solid rgba(0, 92, 93, 1);
+    border-radius: 8px;
+    text-decoration: none;
+
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+
+    color: rgba(0, 92, 93, 1);
+    transition: 0.3s ease;
+    margin-bottom: 40px;
+}
+
+.who-btn:hover {
+    background: rgba(0, 92, 93, 1);
+    color: #fff;
+}
+
+/* Image */
+
+.who-image img {
+    width: 100%;
+    border-radius: 14px;
+    display: block;
+    height: 40vh;
+}
+@media (max-width: 992px) {
+
+    .who-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .who-title {
+        font-size: 36px;
+    }
+
+    .who-heading {
+        font-size: 26px;
+    }
+
+    .who-text {
+        font-size: 16px;
+    }
+}
+
+/* ================= AREAS SECTION ================= */
+
+.areas-section {
+    background: #f5f5f5;
+    padding: 120px 0;
+}
+
+.areas-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Header */
+.areas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.areas-title {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.areas-sub {
+    font-size: 18px;
+    color: #666;
+}
+
+.areas-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgba(0,92,93,1);
+}
+
+/* Carousel */
+.area-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.area-card img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark bottom fade */
+.area-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75) 0%,
+        rgba(0,0,0,0.3) 50%,
+        rgba(0,0,0,0) 100%
+    );
+}
+
+/* Text overlay */
+.area-overlay {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 2;
+    color: #fff;
+}
+
+.area-overlay h3 {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.area-overlay p {
+    font-family: "Clash Grotesk", sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.area-overlay span {
+    font-size: 16px;
+    opacity: 0.9;
+}
+/* ================= HOTSPOTS ================= */
+
+.hotspots-section {
+    background: #ffffff;
+    padding: 120px 0;
+}
+
+.hotspots-container {
+    width: 88%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.hotspots-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hotspots-title {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.hotspots-sub {
+    font-family: "Clash Grotesk", sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    color: #666;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Card */
+.hotspot-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.hotspot-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.hotspot-card:hover img {
+    transform: scale(1.05);
+}
+
+.hotspot-overlay {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: #fff;
+    font-family: "Clash Grotesk", sans-serif;
+    font-size: 22px;
+}
+
+/* Dark bottom fade */
+.hotspot-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.7) 0%,
+        rgba(0,0,0,0.2) 60%,
+        rgba(0,0,0,0) 100%
+    );
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hotspot-card img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hotspots-title {
+        font-size: 30px;
+    }
+
+    .hotspot-card img {
+        height: 300px;
+    }
+}
+/* ================= CTA SECTION ================= */
+
+.cta-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Background */
+.cta-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Dark overlay */
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* Content */
+.cta-content {
+    position: relative;
+    z-index: 2;
+    width: 88%;
+    max-width: 1400px;
+    margin: auto;
+    color: #fff;
+}
+
+/* Title */
+.cta-title {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 52px;
+    letter-spacing: 0;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+/* Button */
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    text-decoration: none;
+
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #fff;
+    color: rgba(0, 92, 93, 1);
+}
+@media (max-width: 992px) {
+
+    .cta-section {
+        height: 80vh;
+    }
+
+    .cta-title {
+        font-size: 42px;
+        line-height: 52px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .cta-section {
+        height: auto;
+        padding: 120px 0;
+    }
+
+    .cta-title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .cta-content {
+        text-align: left;
+    }
+}
+/* ================= BUY SECTION ================= */
+
+.buy-section {
+    background: #f5f5f5;
+    padding: 120px 0;
+}
+
+.buy-container {
+    width: 88%;
+    max-width: 1400px;
+    margin: auto;
+    /* border: #000 solid 2px; */
+}
+
+/* Header */
+
+.buy-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.buy-title {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 100%;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+}
+.areas-carousel{
+    width: 100%;
+}
+.buy-sub {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #777;
+}
+
+.buy-link {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: rgba(0, 92, 93, 1);
+    transition: 0.3s ease;
+}
+
+.buy-link:hover {
+    opacity: 0.7;
+}
+
+/* Grid */
+
+.buy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+/* Card base styling */
+
+.property-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-8px);
+}
+@media (max-width: 1200px) {
+    .buy-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .buy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .buy-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .buy-title {
+        font-size: 34px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .buy-section {
+        padding: 80px 0;
+    }
+
+    .buy-title {
+        font-size: 28px;
+    }
+
+    .buy-sub {
+        font-size: 16px;
+    }
+}
+
+/* Card */
+.property-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    flex: 1;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Image */
+.card-image {
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+/* Buy badge */
+.badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* Price overlay */
+.price-tag {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+
+    font-family: 'Figtree', sans-serif;
+    font-weight: 600;
+    font-size: 23.48px;
+    line-height: 35.23px;
+}
+
+/* Image count */
+.image-count {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 25px;
+}
+
+.image-count img {
+    width: 18px;
+    height: 20px;
+}
+
+/* Content */
+.card-content {
+    padding: 30px;
+}
+
+/* Title */
+.card-title {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 15px;
+}
+
+/* Location */
+.card-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Meta */
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 18px;
+}
+
+.card-meta .meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card-meta img {
+    width: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+    .related-properties {
+        padding: 60px 0;
+    }
+
+    .cards-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .property-card {
+        box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+    }
+
+    .card-image img {
+        height: 260px;
+    }
+
+    .related-heading {
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 40px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .card-location {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .card-meta {
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    .price-tag {
+        font-size: 18px;
+        padding: 8px 14px;
+    }
+
+    .badge {
+        font-size: 14px;
+        padding: 6px 14px;
+    }
+    .image-count {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 25px;
+}
+
+.image-count img {
+    width: 18px;
+    height: 20px;
+}
+
+}
+/* ================= PARTNERS SECTION ================= */
+
+.partners-section{
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+}
+
+/* Background */
+
+.partners-bg{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay */
+
+.partners-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+/* Content */
+
+.partners-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+    padding-top: 140px;
+    color: #fff;
+}
+
+.partners-title{
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.partners-text{
+    font-family: "Clash Grotesk", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    opacity: 0.9;
+}
+
+
+/* ================= BRAND STRIP ================= */
+
+.brand-strip{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.45);
+    overflow: hidden;
+}
+
+/* Moving track */
+
+.brand-track{
+    display: flex;
+    width: max-content;
+    animation: scrollBrands 25s linear infinite;
+}
+
+.brand-track img{
+    height: 60px;
+    margin: 25px 60px;
+}
+
+
+/* Animation */
+
+@keyframes scrollBrands{
+
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-50%);
+    }
+
+}
+@media (max-width: 768px){
+
+.partners-section{
+    height: 520px;
+}
+
+.partners-title{
+    font-size: 32px;
+}
+
+.partners-text{
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.brand-strip{
+    height: 90px;
+}
+
+.brand-track img{
+    height: 45px;
+}
+
+}
+/* ================= INSIGHTS ================= */
+
+.insights-section{
+    padding:120px 0;
+    background:#f5f5f5;
+}
+
+.insights-container{
+    width:88%;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* Header */
+
+.insights-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:60px;
+}
+
+.insights-title{
+    font-family:"Clash Grotesk", sans-serif;
+    font-weight:500;
+    font-size:42px;
+    line-height:100%;
+    letter-spacing:0;
+}
+
+.insights-link{
+    font-family:"Urbanist", sans-serif;
+    font-size:16px;
+    color:rgba(0,92,93,1);
+    text-decoration:none;
+}
+
+/* Grid */
+
+.insights-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+/* Card */
+
+.insight-card{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+}
+
+/* Image */
+
+.insight-image img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+/* Content */
+
+.insight-content{
+    padding:20px;
+}
+
+/* Date */
+
+.insight-date{
+    font-family:"Clash Grotesk", sans-serif;
+    font-weight:500;
+    font-size:16px;
+    line-height:24px;
+    color:#777;
+}
+
+/* Text */
+
+.insight-text{
+    font-family:"Clash Grotesk", sans-serif;
+    font-weight:400;
+    font-size:20px;
+    line-height:24px;
+    margin:12px 0 18px 0;
+}
+
+/* Read more */
+
+.read-more{
+    font-family:"Urbanist", sans-serif;
+    font-size:16px;
+    color:rgba(0,92,93,1);
+    text-decoration:none;
+}
+@media (max-width:992px){
+
+.insights-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:768px){
+
+.insights-grid{
+    grid-template-columns:1fr;
+}
+
+.insights-title{
+    font-size:32px;
+}
+
+.insight-text{
+    font-size:18px;
+}
+
+}
+
+
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+/* ================= FOOTER ================= */
+.footer {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Background Image */
+.footer-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Dark Overlay */
+.footer-overlay {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.76);
+    padding: 100px 0 50px 0;
+}
+.footer-container {
+    width: 88%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px;
+}
+
+/* Columns */
+.footer-col h4 {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-col a,
+.footer-col p {
+    display: block;
+    font-size: 16px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 10px;
+    text-decoration: none;
+    line-height: 24px;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+/* Logo + Social */
+.footer-bottom-top {
+    width: 88%;
+    max-width: 1400px;
+    margin: 80px auto 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 100px;
+    /* width: 150px; */
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social img {
+    width: 28px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.footer-social img:hover {
+    opacity: 1;
+}
+
+/* Divider */
+.footer-divider {
+    width: 88%;
+    max-width: 1400px;
+    margin: auto;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-bottom: 25px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    width: 88%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+}
+
+.footer-legal {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-legal a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    color: #fff;
+}
+@media (max-width: 1200px) {
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-bottom-top {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .second-container,
+    .container-related,
+    .list-container,
+    .footer-container,
+    .footer-bottom,
+    .footer-bottom-top {
+        width: 92%;
+    }
+}

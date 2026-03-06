@@ -7,7 +7,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- css  -->
-    <link rel="stylesheet" href="Property.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 <body>
 
@@ -21,7 +23,7 @@
 
             <nav class="nav-links">
                 <div class="dropdown">
-                    <a href="#" class="dropdown-toggle">Buy </a>
+                    <a href="buy.html" class="dropdown-toggle">Buy </a>
 
                     <div class="dropdown-menu">
                         <a href="#">Apartments</a>
@@ -30,11 +32,11 @@
                         <a href="#">Penthouses</a>
                     </div>
                 </div>
-                <a href="#">Rent</a>
-                <a href="#">Offplan</a>
-                <a href="#">Communities</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
+                <a href="rent.html">Rent</a>
+                <a href="offplan.html">Offplan</a>
+                <a href="communities.html">Communities</a>
+                <a href="abooutus.html">About Us</a>
+                <a href="contactus.html">Contact</a>
             </nav>
              <div class="hamburger" id="hamburger">
                 <span></span>
@@ -44,7 +46,7 @@
 
 
             <div class="nav-button">
-                <a href="#" class="list-btn">
+                <a href="listwithus.html" class="list-btn">
                     List With Us ↗
                 </a>
             </div>
@@ -52,220 +54,268 @@
         </div>
     </header>
 
+  <section class="index-hero">
 
-    <!-- HERO SECTION -->
-   <section class="hero">
-    <img src="images/0896389a365eba42a2e4c335240161b5d78d7c5d.jpg" 
-         class="hero-img" 
-         id="mainHeroImage"
-         alt="Luxury Property">
+  <!-- Background Video -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="images/aerial-view-of-d3-park-in-dubai-design-district-d-2026-02-05-15-38-46-utc.mp4" type="video/mp4">
+  </video>
 
-    <div class="hero-thumbnails">
-        <div class="thumb">
-            <img src="images/heroimg1.png" 
-                 onclick="changeHero(this)">
-        </div>
-        <div class="thumb">
-            <img src="images/heroimg2.png" 
-                 onclick="changeHero(this)">
-        </div>
+  <!-- Dark Overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Content -->
+  <div class="hero-content">
+
+    <h1 class="hero-title">
+      Trusted Partner in <br> Property Investment
+    </h1>
+
+    <!-- Search Box -->
+    <div class="search-wrapper">
+
+            <div class="search-box">
+
+                <!-- Tabs aligned right -->
+                <div class="search-tabs">
+                <div class="tab-indicator"></div>
+                <button class="tab active">Buy</button>
+                <button class="tab">Rent</button>
+                <button class="tab">Offplan</button>
+                </div>
+
+                <!-- Input -->
+                <div class="search-bar">
+                <input type="text" placeholder="Enter Keyword">
+                <button class="search-btn">Search</button>
+                </div>
+
+            </div>
+
+            </div>
+
+  </div>
+
+  <!-- Floating Icons -->
+  <div class="floating-icons">
+    <div class="icon"><img src="images/WhatsApp-Icon.png" alt=""></div>
+    <div class="icon"><img src="images/phoneicon.png" alt=""></div>
+  </div>
+
+</section>
+<section class="brand-section">
+
+    <!-- Background Image -->
+    <img src="images/d2fc4569864e06d8d57ad72abb763cbeb00e15b4.jpg" alt="RAS Development" class="brand-bg">
+
+    <!-- Overlay -->
+    <div class="brand-overlay"></div>
+
+    <!-- Content -->
+    <div class="brand-content">
+        <img src="images/raslogo.jpg" alt="RAS Logo" class="brand-logo">
+
+        <p class="brand-text">
+            Bathed in the vibrant light of Dubai, RAS Real estate embodies a contemporary architectural expression defined by clean lines and refined geometry. Its thoughtfully planned spaces blend effortlessly with the city’s dynamic surroundings, creating a seamless connection between elegant interiors and the urban landscape.
+        </p>
     </div>
+
 </section>
 
-    <!-- second  -->
+<section class="who-section">
 
-    <section class="second">
+    <div class="who-container">
 
-        <div class="second-container">
+        <!-- LEFT -->
+        <div class="who-left">
+            <h2 class="who-title">Who We Are</h2>
+        </div>
 
-            <!-- LEFT CONTENT -->
-            <div class="property-details">
+        <!-- RIGHT -->
+        <div class="who-right">
 
-            <!-- Price -->
-            <div class="price">
-                AED 1,80,000 <span>/ Year</span>
-            </div>
+            <h3 class="who-heading">
+                Everything you need is here
+            </h3>
 
-            <!-- Title -->
-            <h1 class="property-title">
-                Luxurious 4-Bedroom Apartment with Skyline Ocean Views
-            </h1>
-
-            <!-- Location -->
-            <p class="property-location">
-                Talea By Beyond, Maritime City, Dubai, UAE
-            </p>
-            <div class="property-meta">
-
-                <div class="meta-item">
-                    <img src="images/bed.svg" alt="">
-                    <span>4 Bedrooms</span>
-                </div>
-
-                <div class="meta-item">
-                    <img src="images/bath.svg" alt="">
-                    <span>4 Bathrooms</span>
-                </div>
-
-                <div class="meta-item">
-                    <img src="images/area.svg" alt="">
-                    <span>3,200 Sqft</span>
-                </div>
-
-            </div>
-
-            <hr class="divider">
-
-            <!-- Description -->
-            <h3 class="section-heading">Description</h3>
-            <p class="description-text">
-                Tuanam has announced the launch of this stunning waterfront development offering 
-                breathtaking skyline views and modern luxury living. Designed with premium 
-                finishes and world-class amenities, residents enjoy seamless connectivity and 
-                dedicated assistance at every stage.
-            </p>
-            <p class="description-text">
-                Tuanam has announced the launch of this stunning waterfront development offering 
-                breathtaking skyline views and modern luxury living. Designed with premium 
-                finishes and world-class amenities, residents enjoy seamless connectivity and 
-                dedicated assistance at every stage.
+            <p class="who-text">
+                Bathed in Dubai’s vibrant light, RAS Real estate features contemporary architecture with clean lines, refined geometry, and seamless urban integration.
             </p>
 
-            <!-- Features -->
-            <h3 class="section-heading">Features</h3>
-            <div class="features-grid">
-                <p><img src="images/mdi_tick-circle-outline.png" alt="">&nbsp; 4 Bedrooms</p>
-                <p><img src="images/mdi_tick-circle-outline.png" alt="">&nbsp; 4 Bathrooms</p>
-                <p><img src="images/mdi_tick-circle-outline.png" alt="">&nbsp; 3,200 Sqft</p>
-                <p><img src="images/mdi_tick-circle-outline.png" alt="">&nbsp; Dedicated Parking</p>
-                <p><img src="images/mdi_tick-circle-outline.png" alt="">&nbsp; Swimming Pool</p>
-                <p><img src="images/mdi_tick-circle-outline.png" alt="">&nbsp; Private Balcony</p>
-            </div>
+            <a href="#" class="who-btn">
+                Our Story <span>↗</span>
+            </a>
 
-            <!-- Location -->
-            <h3 class="section-heading">Location</h3>
-            <div class="map">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d925134.3210715873!2d54.568041327437584!3d25.0745656650172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1772332811667!5m2!1sen!2sin"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
-
-            </div>
-
-            <!-- RIGHT SIDE AGENT CARD -->
-            <div class="agent-card">
-
-            <img src="images/agent.jpg" alt="Agent" class="agent-img">
-
-            <div class="agent-info">
-                <h4 class="agent-name">Layla Hassan</h4>
-                <p class="agent-role">Director of Sales</p>
-
-                <div class="agent-buttons">
-                    <button><img src="images/phoneicon.png" alt="">&nbsp; Call Us</button>
-                    <button><img src="images/emailicon.png " alt="">&nbsp; Email Us</button>
-                </div>
-
-                <button class="whatsapp"><img src="images/logos_whatsapp-icon.png" alt=""> Whatsapp</button>
-
-                <p class="share"><img src="images/shareicon.png" alt="">&nbsp; Share Property</p>
-            </div>
-
+            <div class="who-image">
+                <img src="images/whoweare.jpg" alt="RAS Development">
             </div>
 
         </div>
 
-    </section>
+    </div>
 
-    <section class="related-properties">
+</section>
+<section class="areas-section">
 
-        <div class="container-related">
+    <div class="areas-container">
 
-            <h2 class="related-heading">
-            Other properties that may interest you
+        <div class="areas-header">
+            <div>
+                <h2 class="areas-title">
+                    Explore Most Popular Areas In Dubai
+                </h2>
+                <p class="areas-sub">
+                    Explore the latest projects and communities across Dubai.
+                </p>
+            </div>
+
+            <a href="#" class="areas-link">
+                See All Communities ↗
+            </a>
+        </div>
+
+        <!-- Owl Carousel -->
+        <div class="owl-carousel areas-carousel">
+
+            <!-- ITEM -->
+            <div class="area-card">
+                <img src="images/area1.png" alt="">
+                <div class="area-overlay">
+                    <h3>Dubai Marina Waterfront Community</h3>
+                    <p>Vibrant waterfront homes with lifestyle appeal.</p>
+                    <span>Apartments & Villas | Freehold | Master-Planned</span>
+                </div>
+            </div>
+
+            <div class="area-card">
+                <img src="images/area2.jpg" alt="">
+                <div class="area-overlay">
+                    <h3>Skyline Residences</h3>
+                    <p>Vibrant waterfront homes with lifestyle appeal.</p>
+                    <span>Studios to 4 BR | Waterfront Living</span>
+                </div>
+            </div>
+
+            <div class="area-card">
+                <img src="images/area3.jpg" alt="">
+                <div class="area-overlay">
+                    <h3>Palm Island Community</h3>
+                    <p>Luxury beachfront lifestyle.</p>
+                    <span>Villas | Private Beach | Elite Living</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="hotspots-section">
+
+    <div class="hotspots-container">
+
+        <div class="hotspots-header">
+            <h2 class="hotspots-title">
+                Discover Dubai’s Top Investment Hotspots
             </h2>
+            <p class="hotspots-sub">
+                Explore carefully selected residential and commercial areas offering strong growth, rental potential, and long-term value.
+            </p>
+        </div>
 
-            <div class="cards-wrapper">
+        <div class="owl-carousel hotspots-carousel">
 
-                <!-- CARD 1 -->
-                <div class="property-card">
+            <!-- CARD -->
+            <div class="hotspot-card">
+                <img src="images/marina.jpg" alt="">
+                <div class="hotspot-overlay">
+                    <h3>Dubai Marina</h3>
+                </div>
+            </div>
 
-                    <div class="card-image">
+            <div class="hotspot-card">
+                <img src="images/marjan.png" alt="">
+                <div class="hotspot-overlay">
+                    <h3>Marjan Island</h3>
+                </div>
+            </div>
+
+            <div class="hotspot-card">
+                <img src="images/saadyath.png" alt="">
+                <div class="hotspot-overlay">
+                    <h3>Saadiyat Island</h3>
+                </div>
+            </div>
+
+            <div class="hotspot-card">
+                <img src="images/jumeriah.png" alt="">
+                <div class="hotspot-overlay">
+                    <h3>Jumeirah Village Circle</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta-section">
+
+    <!-- Background Image -->
+    <img src="images/cta-bg.jpg" alt="Real Estate View" class="cta-bg">
+
+    <!-- Overlay -->
+    <div class="cta-overlay"></div>
+
+    <!-- Content -->
+    <div class="cta-content">
+        <h2 class="cta-title">
+            Buying Or Rent?<br>
+            We are the Masters Of<br>
+            Real Estate
+        </h2>
+
+        <a href="#" class="cta-btn">
+            Connect Us <span>↗</span>
+        </a>
+    </div>
+
+</section>
+
+<section class="buy-section">
+
+    <div class="buy-container">
+
+        <!-- Header -->
+        <div class="buy-header">
+            <div>
+                <h2 class="buy-title">Buying Property in Dubai</h2>
+                <p class="buy-sub">New top-launched projects</p>
+            </div>
+
+            <a href="#" class="buy-link">
+                See All Properties ↗
+            </a>
+        </div>
+
+        <!-- Grid -->
+        <div class="buy-grid">
+
+            <!-- CARD 1 -->
+            <div class="property-card">
+                <div class="card-image">
                     <img src="images/property1.jpg" alt="Property">
-
                     <span class="badge">Buy</span>
-
-                    <div class="price-tag">
-                        AED 1,800,000
-                    </div>
-
+                    <div class="price-tag">AED 1,800,000</div>
                     <div class="image-count">
                         <span>7</span>
                         <img src="images/gallery.svg" alt="">
-                        
-                    </div>
-                    </div>
-
-                    <div class="card-content">
-
-                    <h3 class="card-title">
-                        Luxurious 4-Bedroom Apartment with Skyline Ocean Views
-                    </h3>
-
-                    <div class="card-location">
-                       <img src="images/location.png" alt="">
-                        <span>Talea By Beyond, Maritime City, Dubai, UAE</span>
-                    </div>
-
-                    <div class="card-meta">
-                        <span class="type">Apartment</span>
-                        <span class="divider">|</span>
-
-                        <div class="meta">
-                        <img src="images/bed.svg" alt="">
-                        <span>4</span>
-                        </div><span class="divider">|</span>
-
-                        <div class="meta">
-                        <img src="images/bath.svg" alt="">
-                        <span>2</span>
-                        </div><span class="divider">|</span>
-
-                        <div class="meta">
-                        <img src="images/area.svg" alt="">
-                        <span>3,200 Sqft</span>
-                        </div>
-
-                    </div>
-
                     </div>
                 </div>
 
-                <!-- CARD 2 (same structure) -->
-                <div class="property-card">
-
-                    <div class="card-image">
-                    <img src="images/property2.png" alt="Property">
-
-                    <span class="badge">Buy</span>
-
-                    <div class="price-tag">
-                        AED 1,800,000
-                    </div>
-
-                    <div class="image-count">
-                        <span>7</span>
-                        <img src="images/gallery.svg" alt="">
-                        
-                    </div>
-                    </div>
-
-                    <div class="card-content">
-
+                <div class="card-content">
                     <h3 class="card-title">
                         Luxurious 4-Bedroom Apartment with Skyline Ocean Views
                     </h3>
@@ -280,85 +330,288 @@
                         <span class="divider">|</span>
 
                         <div class="meta">
-                        <img src="images/bed.svg" alt="">
-                        <span>4</span>
-                        </div><span class="divider">|</span>
-
-                        <div class="meta">
-                        <img src="images/bath.svg" alt="">
-                        <span>2</span>
-                        </div><span class="divider">|</span>
-
-                        <div class="meta">
-                        <img src="images/area.svg" alt="">
-                        <span>3,200 Sqft</span>
+                            <img src="images/bed.svg" alt="">
+                            <span>4</span>
                         </div>
+                        <span class="divider">|</span>
 
+                        <div class="meta">
+                            <img src="images/bath.svg" alt="">
+                            <span>2</span>
+                        </div>
+                        <span class="divider">|</span>
+
+                        <div class="meta">
+                            <img src="images/area.svg" alt="">
+                            <span>3,200 Sqft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-card">
+                <div class="card-image">
+                    <img src="images/property1.jpg" alt="Property">
+                    <span class="badge">Buy</span>
+                    <div class="price-tag">AED 1,800,000</div>
+                    <div class="image-count">
+                        <span>7</span>
+                        <img src="images/gallery.svg" alt="">
                     </div>
                 </div>
 
+                <div class="card-content">
+                    <h3 class="card-title">
+                        Luxurious 4-Bedroom Apartment with Skyline Ocean Views
+                    </h3>
+
+                    <div class="card-location">
+                        <img src="images/location.png" alt="">
+                        <span>Talea By Beyond, Maritime City, Dubai, UAE</span>
+                    </div>
+
+                    <div class="card-meta">
+                        <span class="type">Apartment</span>
+                        <span class="divider">|</span>
+
+                        <div class="meta">
+                            <img src="images/bed.svg" alt="">
+                            <span>4</span>
+                        </div>
+                        <span class="divider">|</span>
+
+                        <div class="meta">
+                            <img src="images/bath.svg" alt="">
+                            <span>2</span>
+                        </div>
+                        <span class="divider">|</span>
+
+                        <div class="meta">
+                            <img src="images/area.svg" alt="">
+                            <span>3,200 Sqft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-card">
+                <div class="card-image">
+                    <img src="images/property1.jpg" alt="Property">
+                    <span class="badge">Buy</span>
+                    <div class="price-tag">AED 1,800,000</div>
+                    <div class="image-count">
+                        <span>7</span>
+                        <img src="images/gallery.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h3 class="card-title">
+                        Luxurious 4-Bedroom Apartment with Skyline Ocean Views
+                    </h3>
+
+                    <div class="card-location">
+                        <img src="images/location.png" alt="">
+                        <span>Talea By Beyond, Maritime City, Dubai, UAE</span>
+                    </div>
+
+                    <div class="card-meta">
+                        <span class="type">Apartment</span>
+                        <span class="divider">|</span>
+
+                        <div class="meta">
+                            <img src="images/bed.svg" alt="">
+                            <span>4</span>
+                        </div>
+                        <span class="divider">|</span>
+
+                        <div class="meta">
+                            <img src="images/bath.svg" alt="">
+                            <span>2</span>
+                        </div>
+                        <span class="divider">|</span>
+
+                        <div class="meta">
+                            <img src="images/area.svg" alt="">
+                            <span>3,200 Sqft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-card">
+                <div class="card-image">
+                    <img src="images/property1.jpg" alt="Property">
+                    <span class="badge">Buy</span>
+                    <div class="price-tag">AED 1,800,000</div>
+                    <div class="image-count">
+                        <span>7</span>
+                        <img src="images/gallery.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h3 class="card-title">
+                        Luxurious 4-Bedroom Apartment with Skyline Ocean Views
+                    </h3>
+
+                    <div class="card-location">
+                        <img src="images/location.png" alt="">
+                        <span>Talea By Beyond, Maritime City, Dubai, UAE</span>
+                    </div>
+
+                    <div class="card-meta">
+                        <span class="type">Apartment</span>
+                        <span class="divider">|</span>
+
+                        <div class="meta">
+                            <img src="images/bed.svg" alt="">
+                            <span>4</span>
+                        </div>
+                        <span class="divider">|</span>
+
+                        <div class="meta">
+                            <img src="images/bath.svg" alt="">
+                            <span>2</span>
+                        </div>
+                        <span class="divider">|</span>
+
+                        <div class="meta">
+                            <img src="images/area.svg" alt="">
+                            <span>3,200 Sqft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+<section class="partners-section">
+
+    <!-- Background Image -->
+    <img src="images/dubai-skyline.jpg" class="partners-bg" alt="Dubai Skyline">
+
+    <!-- Overlay -->
+    <div class="partners-overlay"></div>
+
+    <!-- Content -->
+    <div class="partners-content">
+
+        <h2 class="partners-title">
+            Developer Partners
+        </h2>
+
+        <p class="partners-text">
+            Discover RAS Real estate’s International Real Estate Dubai preferred developers in
+            the United Arab Emirates. These long-standing selected developers are known for
+            their quality and on-time deliverability of projects.
+        </p>
+
+    </div>
+
+
+    <!-- BRAND STRIP -->
+    <div class="brand-strip">
+
+        <div class="brand-track">
+            <img src="images/all-brands.png" alt="Developers">
+            <img src="images/all-brands.png" alt="Developers">
+            <img src="images/all-brands.png" alt="Developers">
+            <img src="images/all-brands.png" alt="Developers">
+            <img src="images/all-brands.png" alt="Developers">
+            <img src="images/all-brands.png" alt="Developers">
+            <img src="images/all-brands.png" alt="Developers">
+            <img src="images/all-brands.png" alt="Developers">
+        </div>
+
+    </div>
+
+</section>
+<section class="insights-section">
+
+    <div class="insights-container">
+
+        <!-- Header -->
+        <div class="insights-header">
+            <h2 class="insights-title">Insights</h2>
+
+            <a href="#" class="insights-link">
+                See All Posts ↗
+            </a>
+        </div>
+
+
+        <!-- Cards -->
+        <div class="insights-grid">
+
+            <!-- CARD 1 -->
+            <div class="insight-card">
+
+                <div class="insight-image">
+                    <img src="images/insight1.jpg" alt="">
+                </div>
+
+                <div class="insight-content">
+                    <span class="insight-date">Dec 24 2025</span>
+
+                    <p class="insight-text">
+                        Expert insights and market analysis on Dubai’s evolving real estate sector.
+                    </p>
+
+                    <a href="#" class="read-more">Read more ↗</a>
                 </div>
 
             </div>
 
-    </section>
 
-    <!-- list property  -->
+            <!-- CARD 2 -->
+            <div class="insight-card">
 
-    <section class="list-property">
+                <div class="insight-image">
+                    <img src="images/insight2.jpg" alt="">
+                </div>
 
-        <div class="list-container">
+                <div class="insight-content">
+                    <span class="insight-date">Dec 24 2025</span>
 
-            <!-- LEFT SIDE -->
-            <div class="list-left">
-            <h2 class="list-heading">
-                List Your Property <br> With Us
-            </h2>
+                    <p class="insight-text">
+                        Actionable guidance to support confident buying, selling, and investment decisions.
+                    </p>
 
-            <p class="list-subtext">
-                List with Tuanam for expert guidance and 
-                maximum property value.
-            </p>
+                    <a href="#" class="read-more">Read more ↗</a>
+                </div>
+
             </div>
 
-            <!-- RIGHT SIDE FORM -->
-            <div class="list-form">
 
-            <form>
+            <!-- CARD 3 -->
+            <div class="insight-card">
 
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
-
-                <div class="phone-field">
-                <span class="flag">🇦🇪</span>
-                <input type="text" placeholder="Phone Number">
+                <div class="insight-image">
+                    <img src="images/insight3.jpg" alt="">
                 </div>
 
-                <div class="row-fields">
-                <input type="text" placeholder="Property Location">
-                <input type="text" placeholder="Property Type">
+                <div class="insight-content">
+                    <span class="insight-date">Dec 24 2025</span>
+
+                    <p class="insight-text">
+                        Receive expert advice for smart property decisions and market strategies.
+                    </p>
+
+                    <a href="#" class="read-more">Read more ↗</a>
                 </div>
-
-                <textarea placeholder="Any Other Details to add?"></textarea>
-
-                <div class="checkbox-field">
-                <input type="checkbox" id="agree">
-                <label for="agree">
-                    I agree to be contacted by Tuanam for property listing.
-                </label>
-                </div>
-
-                <button type="submit" class="submit-btn">
-                Register Your Details ↗
-                </button>
-
-            </form>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+
+
 
     <!-- footer  -->
 
@@ -461,6 +714,8 @@
 
             </footer>
 
-    <script src="property.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
