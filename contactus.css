@@ -1,5 +1,18 @@
 /* HERO */
 
+html, body{
+    overflow-x: hidden;
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+.owl-stage{
+    overflow:hidden;
+}
+[data-aos]{
+    will-change: transform, opacity;
+}
 .contact-hero{
 	position:relative;
 	height:100vh;

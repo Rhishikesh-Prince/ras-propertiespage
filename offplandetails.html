@@ -9,6 +9,7 @@
     <!-- css  -->
     <!-- <link rel="stylesheet" href="buy.css"> -->
     <link rel="stylesheet" href="Property.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
 
@@ -17,9 +18,9 @@
     <header class="custom-navbar">
         <div class="nav-container">
 
-            <div class="logo">
+            <a href="index.html"><div class="logo">
                 <img src="images/raslogo.jpg" alt="RAS Logo">
-            </div>
+            </div></a>
 
             <nav class="nav-links">
                 <div class="dropdown">
@@ -63,7 +64,7 @@
 		     id="mainHeroImage"
 		     alt="Offplan Project">
 
-		<div class="hero-thumbnails">
+		<div class="hero-thumbnails" data-aos="fade-left">
 
 			<div class="thumb">
 				<img src="images/heroimg1.png" onclick="changeHero(this)">
@@ -92,7 +93,7 @@
 
 			<!-- LEFT CONTENT -->
 
-			<div class="property-details">
+			<div class="property-details" data-aos="fade-right">
 
 
 				<div class="price">
@@ -166,7 +167,7 @@
 				</h3>
 
 
-				<div class="features-grid">
+				<div class="features-grid" data-aos="fade-up">
 
 					<p>
 						<img src="images/mdi_tick-circle-outline.png">
@@ -207,7 +208,7 @@
 				</h3>
 
 
-				<div class="map">
+				<div class="map" data-aos="zoom-in">
 
 					<iframe
 						src="https://www.google.com/maps?q=Dubai&output=embed"
@@ -225,7 +226,7 @@
 
 			<!-- SALES CONSULTANT CARD -->
 
-			<div class="agent-card">
+			<div class="agent-card" data-aos="fade-left">
 
 				<img src="images/offplanrrealtor.jpg" class="agent-img">
 
@@ -282,14 +283,14 @@
 
         <div class="container-related">
 
-            <h2 class="related-heading">
+            <h2 class="related-heading" data-aos="fade-up">
             Other properties that may interest you
             </h2>
 
             <div class="cards-wrapper">
 
                 <!-- CARD 1 -->
-                <div class="property-card">
+                <div class="property-card" data-aos="fade-up">
 
                     <div class="card-image">
                     <img src="images/property1.jpg" alt="Property">
@@ -343,7 +344,7 @@
                 </div>
 
                 <!-- CARD 2 (same structure) -->
-                <div class="property-card">
+                <div class="property-card" data-aos="fade-up" data-aos-delay="150">
 
                     <div class="card-image">
                     <img src="images/property2.png" alt="Property">
@@ -407,7 +408,7 @@
         <div class="list-container">
 
             <!-- LEFT SIDE -->
-            <div class="list-left">
+           <div class="list-left" data-aos="fade-right">
             <h2 class="list-heading">
                 List Your Property <br> With Us
             </h2>
@@ -419,7 +420,7 @@
             </div>
 
             <!-- RIGHT SIDE FORM -->
-            <div class="list-form">
+            <div class="list-form" data-aos="fade-left">
 
             <form>
 
@@ -457,9 +458,117 @@
 
     </section>
 
+    <footer class="footer">
+
+            <!-- Background Image -->
+            <img src="images/footerbg.jpg" alt="Dubai Skyline" class="footer-bg">
+
+            <!-- Dark Overlay -->
+            <div class="footer-overlay">
+
+                <div class="footer-container" data-aos="fade-up">
+
+                <!-- COLUMN 1 -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#">Buy</a>
+                    <a href="#">Rent</a>
+                    <a href="#">Offplan</a>
+                    <a href="#">Communities</a>
+                    <a href="#">List With Us</a>
+                    <a href="#">Mortgage Services</a>
+                    <a href="#">Our Holding</a>
+                </div>
+
+                <!-- COLUMN 2 -->
+                <div class="footer-col">
+                    <h4>Developers</h4>
+                    <a href="#">Emaar</a>
+                    <a href="#">DAMAC</a>
+                    <a href="#">Sobha</a>
+                    <a href="#">Meraas</a>
+                    <a href="#">H&H</a>
+                    <a href="#">Omniyat</a>
+                    <a href="#">Binghatti</a>
+                </div>
+
+                <!-- COLUMN 3 -->
+                <div class="footer-col">
+                    <h4>Developers</h4>
+                    <a href="#">Nakheel</a>
+                    <a href="#">Wasal</a>
+                    <a href="#">Ellington</a>
+                    <a href="#">Majid Al Futtaim</a>
+                    <a href="#">Arada</a>
+                </div>
+
+                <!-- COLUMN 4 -->
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <a href="#">Our Story</a>
+                    <a href="#">Career</a>
+                    <a href="#">Contact Us</a>
+                </div>
+
+                <!-- COLUMN 5 -->
+                <div class="footer-col">
+                    <h4>Guidance</h4>
+                    <a href="#">Guides</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Insights</a>
+                </div>
+
+                <!-- COLUMN 6 -->
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <p>RAS Real estate L.L.C.</p>
+                    <p>Office 107, Bay Square B11 Business Bay, Dubai, UAE</p>
+                    <p>info@rasrealestate.com</p>
+                    <p>+971 123456734</p>
+                </div>
+
+                </div>
+
+                <!-- Logo + Social -->
+                <div class="footer-bottom-top">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="RAS Logo">
+                </div>
+
+                <div class="footer-social">
+                    <img src="images/instagram.svg" alt="">
+                    <img src="images/linkedin.svg" alt="">
+                </div>
+                </div>
+
+                <hr class="footer-divider">
+
+                <div class="footer-bottom">
+                <p>RAS Real estate © 2026 All Rights Reserved.</p>
+
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms of Agreement</a>
+                    <a href="#">Licenses</a>
+                </div>
+                </div>
+
+            </div>
+
+            </footer>
+
 
 
 	<script src="property.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 900,
+    once: true,
+    offset: 120
+});
+</script>
 
 </body>
 

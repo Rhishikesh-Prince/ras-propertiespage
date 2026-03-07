@@ -5,6 +5,19 @@
     box-sizing: border-box;
 }
 
+html, body{
+    overflow-x: hidden;
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+.owl-stage{
+    overflow:hidden;
+}
+[data-aos]{
+    will-change: transform, opacity;
+}
 body {
     font-family: "Clash Grotesk", sans-serif;
 }

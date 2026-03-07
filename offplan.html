@@ -9,6 +9,7 @@
     <!-- css  -->
     <link rel="stylesheet" href="buy.css">
     <link rel="stylesheet" href="offplan.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
 
@@ -17,9 +18,9 @@
     <header class="custom-navbar">
         <div class="nav-container">
 
-            <div class="logo">
+            <a href="index.html"><div class="logo">
                 <img src="images/raslogo.jpg" alt="RAS Logo">
-            </div>
+            </div></a>
 
             <nav class="nav-links">
                 <div class="dropdown">
@@ -59,13 +60,13 @@
 
         <!-- HEADER -->
 
-        <div class="offplan-header">
+        <div class="offplan-header" data-aos="fade-up">
 
-            <h2 class="offplan-title">
+            <h2 class="offplan-title" data-aos="fade-up" data-aos-delay="100">
                 Dubai Offplan Projects
             </h2>
 
-            <p class="offplan-sub">
+            <p class="offplan-sub" data-aos="fade-up" data-aos-delay="250">
                 Discover newly launched developments and investment opportunities across Dubai.
             </p>
 
@@ -74,7 +75,7 @@
 
         <!-- SEARCH BAR -->
 
-        <div class="offplan-search">
+        <div class="offplan-search" data-aos="fade-up" data-aos-delay="300">
 
             <input type="text" placeholder="Location, developer or keyword">
 
@@ -108,7 +109,7 @@
 
             <!-- CARD -->
 
-            <div class="offplan-card">
+            <div class="offplan-card" data-aos="fade-up">
 
                 <div class="offplan-image">
                     <img src="images/property1.jpg">
@@ -147,7 +148,7 @@
 
             <!-- CARD -->
 
-            <div class="offplan-card">
+            <div class="offplan-card" data-aos="fade-up" data-aos-delay="150">
 
                 <div class="offplan-image">
                     <img src="images/property2.png">
@@ -186,7 +187,7 @@
 
             <!-- CARD -->
 
-            <div class="offplan-card">
+           <div class="offplan-card" data-aos="fade-up" data-aos-delay="300">
 
                 <div class="offplan-image">
                     <img src="images/property2.png">
@@ -232,7 +233,7 @@
     <div class="insights-container">
 
         <!-- Header -->
-        <div class="insights-header">
+        <div class="insights-header" data-aos="fade-up">
             <h2 class="insights-title">Insights</h2>
 
             <a href="#" class="insights-link">
@@ -245,7 +246,7 @@
         <div class="insights-grid">
 
             <!-- CARD 1 -->
-            <div class="insight-card">
+            <div class="insight-card" data-aos="fade-up">
 
                 <div class="insight-image">
                     <img src="images/insight1.jpg" alt="">
@@ -265,7 +266,7 @@
 
 
             <!-- CARD 2 -->
-            <div class="insight-card">
+           <div class="insight-card" data-aos="fade-up" data-aos-delay="150">
 
                 <div class="insight-image">
                     <img src="images/insight2.jpg" alt="">
@@ -285,7 +286,7 @@
 
 
             <!-- CARD 3 -->
-            <div class="insight-card">
+            <div class="insight-card" data-aos="fade-up" data-aos-delay="300">
 
                 <div class="insight-image">
                     <img src="images/insight3.jpg" alt="">
@@ -315,7 +316,7 @@
         <div class="list-container">
 
             <!-- LEFT SIDE -->
-            <div class="list-left">
+            <div class="list-left" data-aos="fade-right">
             <h2 class="list-heading">
                 List Your Property <br> With Us
             </h2>
@@ -327,7 +328,7 @@
             </div>
 
             <!-- RIGHT SIDE FORM -->
-            <div class="list-form">
+           <div class="list-form" data-aos="fade-left">
 
             <form>
 
@@ -375,7 +376,7 @@
             <!-- Dark Overlay -->
             <div class="footer-overlay">
 
-                <div class="footer-container">
+                <div class="footer-container" data-aos="fade-up">
 
                 <!-- COLUMN 1 -->
                 <div class="footer-col">
@@ -468,5 +469,14 @@
 
     <script src="base.js"></script>
     <script src="offplan.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 900,
+    once: true,
+    offset: 120
+});
+</script>
 </body>
 </html>

@@ -9,6 +9,7 @@
     <!-- css  -->
     <link rel="stylesheet" href="rent.css">
     <link rel="stylesheet" href="buy.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
 
@@ -17,9 +18,9 @@
     <header class="custom-navbar">
         <div class="nav-container">
 
-            <div class="logo">
+            <a href="index.html"><div class="logo">
                 <img src="images/raslogo.jpg" alt="RAS Logo">
-            </div>
+            </div></a>
 
             <nav class="nav-links">
                 <div class="dropdown">
@@ -59,7 +60,7 @@
     <div class="rent-container">
 
         <!-- PAGE TITLE -->
-        <div class="rent-page-header">
+        <div class="rent-page-header" data-aos="fade-up">
 
             <h1 class="rent-page-title">
                 Properties For Rent in Dubai
@@ -73,7 +74,7 @@
 
 
         <!-- FILTER BAR -->
-        <div class="filter-bar">
+        <div class="filter-bar" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" placeholder="Area, project or community">
 
@@ -103,7 +104,7 @@
 
 
         <!-- RESULTS BAR -->
-        <div class="results-bar">
+        <div class="results-bar" data-aos="fade-up" data-aos-delay="150">
 
             <div class="view-options">
                 <button class="view-btn active">Grid</button>
@@ -125,13 +126,13 @@
 
 
         <!-- PROPERTY GRID -->
-        <div class="property-grid">
+        <div class="property-grid" data-aos="fade-up" data-aos-delay="200">
 
 
             <!-- PROPERTY CARD -->
             <a href="properties.html" class="property-card-link">
 
-                <div class="property-card">
+                <div class="property-card" data-aos="fade-up">
 
                     <div class="card-image">
 
@@ -193,7 +194,7 @@
             </a>
             <a href="properties.html" class="property-card-link">
 
-                <div class="property-card">
+                <div class="property-card" data-aos="fade-up" data-aos-delay="100">
 
                     <div class="card-image">
 
@@ -255,7 +256,7 @@
             </a>
             <a href="properties.html" class="property-card-link">
 
-                <div class="property-card">
+                <div class="property-card" data-aos="fade-up" data-aos-delay="200">
 
                     <div class="card-image">
 
@@ -317,7 +318,7 @@
             </a>
             <a href="properties.html" class="property-card-link">
 
-                <div class="property-card">
+                <div class="property-card" data-aos="fade-up" data-aos-delay="300">
 
                     <div class="card-image">
 
@@ -383,7 +384,7 @@
 
 
         <!-- PAGINATION -->
-        <div class="pagination">
+        <div class="pagination" data-aos="fade-up">
 
             <button>Previous</button>
 
@@ -404,7 +405,7 @@
     <div class="insights-container">
 
         <!-- Header -->
-        <div class="insights-header">
+        <div class="insights-header" data-aos="fade-up">
             <h2 class="insights-title">Insights</h2>
 
             <a href="#" class="insights-link">
@@ -417,7 +418,7 @@
         <div class="insights-grid">
 
             <!-- CARD 1 -->
-            <div class="insight-card">
+           <div class="insight-card" data-aos="fade-up">
 
                 <div class="insight-image">
                     <img src="images/insight1.jpg" alt="">
@@ -437,7 +438,7 @@
 
 
             <!-- CARD 2 -->
-            <div class="insight-card">
+            <div class="insight-card" data-aos="fade-up" data-aos-delay="100">
 
                 <div class="insight-image">
                     <img src="images/insight2.jpg" alt="">
@@ -457,7 +458,7 @@
 
 
             <!-- CARD 3 -->
-            <div class="insight-card">
+            <div class="insight-card" data-aos="fade-up" data-aos-delay="200">
 
                 <div class="insight-image">
                     <img src="images/insight3.jpg" alt="">
@@ -487,7 +488,7 @@
         <div class="list-container">
 
             <!-- LEFT SIDE -->
-            <div class="list-left">
+           <div class="list-left" data-aos="fade-right">
             <h2 class="list-heading">
                 List Your Property <br> With Us
             </h2>
@@ -499,7 +500,7 @@
             </div>
 
             <!-- RIGHT SIDE FORM -->
-            <div class="list-form">
+            <div class="list-form" data-aos="fade-left">
 
             <form>
 
@@ -547,7 +548,7 @@
             <!-- Dark Overlay -->
             <div class="footer-overlay">
 
-                <div class="footer-container">
+                <div class="footer-container" data-aos="fade-up">
 
                 <!-- COLUMN 1 -->
                 <div class="footer-col">
@@ -639,5 +640,14 @@
             </footer>
 
     <script src="rent.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 900,
+    once: true,
+    offset: 120
+});
+</script>
 </body>
 </html>

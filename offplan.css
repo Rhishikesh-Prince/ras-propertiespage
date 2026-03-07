@@ -1,5 +1,18 @@
 /* ================= OFFPLAN PAGE ================= */
 
+html, body{
+    overflow-x: hidden;
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+.owl-stage{
+    overflow:hidden;
+}
+[data-aos]{
+    will-change: transform, opacity;
+}
 .offplan-section{
     background:#f5f5f5;
     padding:120px 0;

@@ -9,6 +9,7 @@
     <!-- css  -->
     <link rel="stylesheet" href="Property.css">
     <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
 
@@ -17,9 +18,9 @@
     <header class="custom-navbar">
         <div class="nav-container">
 
-            <div class="logo">
+            <a href="index.html"><div class="logo">
                 <img src="images/raslogo.jpg" alt="RAS Logo">
-            </div>
+            </div></a>
 
             <nav class="nav-links">
                 <div class="dropdown">
@@ -60,13 +61,13 @@
 
 	<div class="contact-hero-overlay"></div>
 
-	<div class="contact-hero-content">
+	<div class="contact-hero-content" data-aos="fade-up">
 
-		<h1 class="contact-title">
+		<h1 class="contact-title" data-aos="fade-up" data-aos-delay="100">
 			List your Properties with us 
 		</h1>
 
-		<p class="contact-sub">
+		<p class="contact-sub" data-aos="fade-up" data-aos-delay="250">
 			Our real estate experts are ready to assist you with buying,
 			selling, or investing in Dubai properties.
 		</p>
@@ -83,7 +84,7 @@
         <div class="list-container">
 
             <!-- LEFT SIDE -->
-            <div class="list-left">
+            <div class="list-left" data-aos="fade-right">
             <h2 class="list-heading">
                 List Your Property <br> With Us
             </h2>
@@ -95,9 +96,9 @@
             </div>
 
             <!-- RIGHT SIDE FORM -->
-            <div class="list-form">
+            <div class="list-form" data-aos="fade-left">
 
-            <form>
+            <form data-aos="fade-up" data-aos-delay="200">
 
                 <input type="text" placeholder="Full Name">
                 <input type="email" placeholder="Email Address">
@@ -149,13 +150,13 @@
 
 	<div class="contact-cta-overlay"></div>
 
-	<div class="contact-cta-content">
+	<div class="contact-cta-content" data-aos="zoom-in">
 
-		<h2>
+		<h2 data-aos="fade-up" data-aos-delay="100">
 			Looking For Your Dream Property?
 		</h2>
 
-		<button type="submit" class="submit-btn">
+		<button type="submit" class="submit-btn" data-aos="fade-up" data-aos-delay="250">
 					Speak with our experties ↗
 				</button>
 
@@ -173,7 +174,7 @@
             <!-- Dark Overlay -->
             <div class="footer-overlay">
 
-                <div class="footer-container">
+                <div class="footer-container" data-aos="fade-up">
 
                 <!-- COLUMN 1 -->
                 <div class="footer-col">
@@ -265,5 +266,14 @@
             </footer>
 
     <script src="property.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 900,
+    once: true,
+    offset: 120
+});
+</script>
 </body>
 </html>
