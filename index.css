@@ -604,26 +604,48 @@ body {
     display: block;
     height: 40vh;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px){
 
-    .who-container {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
-    .who-title {
-        font-size: 36px;
-    }
-
-    .who-heading {
-        font-size: 26px;
-    }
-
-    .who-text {
-        font-size: 16px;
-    }
+.who-container{
+    flex-direction:column;
+    gap:40px;
 }
 
+/* full width columns */
+.who-left,
+.who-right{
+    width:100%;
+}
+
+/* title */
+.who-title{
+    font-size:34px;
+}
+
+/* heading */
+.who-heading{
+    font-size:24px;
+    line-height:1.3;
+}
+
+/* paragraph */
+.who-text{
+    font-size:16px;
+    line-height:26px;
+}
+
+/* button spacing */
+.who-btn{
+    margin-bottom:25px;
+}
+
+/* image */
+.who-image img{
+    height:260px;
+    object-fit:cover;
+}
+
+}
 /* ================= AREAS SECTION ================= */
 
 .areas-section {
@@ -718,6 +740,73 @@ body {
     font-size: 16px;
     opacity: 0.9;
 }
+/* ================= AREAS MOBILE FIX ================= */
+
+@media (max-width:768px){
+
+/* container breathing space */
+.areas-container{
+    width:92%;
+}
+
+/* header stack */
+.areas-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+    margin-bottom:35px;
+}
+
+/* title smaller */
+.areas-title{
+    font-size:30px;
+    line-height:1.2;
+}
+
+/* subtitle */
+.areas-sub{
+    font-size:16px;
+}
+
+/* link spacing */
+.areas-link{
+    font-size:14px;
+}
+
+/* card spacing */
+.areas-carousel .owl-stage{
+    padding-left:10px;
+}
+
+/* reduce card height */
+.area-card img{
+    height:380px;
+}
+
+/* overlay padding */
+.area-overlay{
+    left:20px;
+    bottom:20px;
+    right:20px;
+}
+
+/* title inside card */
+.area-overlay h3{
+    font-size:24px;
+    line-height:1.2;
+}
+
+/* description */
+.area-overlay p{
+    font-size:16px;
+}
+
+/* extra info */
+.area-overlay span{
+    font-size:14px;
+}
+
+}
 /* ================= HOTSPOTS ================= */
 
 .hotspots-section {
@@ -809,6 +898,69 @@ body {
     .hotspot-card img {
         height: 300px;
     }
+}
+/* ================= MOBILE SECTION SPACING FIX ================= */
+
+@media (max-width:768px){
+
+/* reduce section spacing */
+.areas-section{
+    padding:70px 0 40px 0;
+}
+
+.hotspots-section{
+    padding:40px 0 70px 0;
+}
+
+/* also reduce header spacing */
+.areas-header{
+    margin-bottom:30px;
+}
+
+.hotspots-header{
+    margin-bottom:35px;
+}
+
+}
+.owl-carousel .owl-stage{
+    margin-left:0 !important;
+}
+.area-card{
+    margin-bottom:0;
+}
+@media (max-width:768px){
+
+.areas-section{
+    padding:70px 0 20px 0;
+}
+
+.hotspots-section{
+    padding:20px 0 70px 0;
+}
+
+}
+/* FIX OWL CAROUSEL EXTRA HEIGHT */
+
+.areas-carousel .owl-stage-outer{
+    overflow:hidden;
+}
+
+.areas-carousel .owl-stage{
+    display:flex;
+    align-items:stretch;
+}
+
+.areas-carousel .owl-item{
+    height:auto !important;
+}
+
+/* remove any extra bottom space */
+.areas-carousel{
+    margin-bottom:0 !important;
+}
+
+.area-card{
+    margin-bottom:0 !important;
 }
 /* ================= CTA SECTION ================= */
 

@@ -182,18 +182,44 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:1fr;
 }
 
-.offplan-search{
-flex-direction:column;
-}
 
-.offplan-search input,
-.offplan-search select,
-.offplan-search-btn{
-width:100%;
-}
 
 .offplan-title{
 font-size:32px;
+}
+
+}
+
+
+@media (max-width:768px){
+
+/* keep cards responsive */
+.offplan-grid{
+    grid-template-columns:1fr;
+}
+
+/* search layout */
+.offplan-search{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+/* search input */
+.offplan-search input{
+    flex:1;
+    height:56px;
+}
+
+/* search button */
+.offplan-search-btn{
+    height:56px;
+    white-space:nowrap;
+}
+
+/* filters */
+.offplan-search select{
+    flex:1 1 calc(25% - 10px);
 }
 
 }

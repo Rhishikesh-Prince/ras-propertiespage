@@ -544,16 +544,30 @@ body {
     gap:20px;
 }
 
+
+}
+@media (max-width:768px){
+
 .filter-bar{
-    flex-direction:column;
-    align-items:stretch;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
-.filter-bar input,
-.filter-bar select,
-.filter-btn{
-    width:100%;
+.filter-bar input{
+    flex:1;
+    height:56px;
 }
+
+.filter-btn{
+    height:56px;
+    white-space:nowrap;
+}
+
+.filter-bar select{
+    flex:1 1 calc(25% - 10px);
+}
+
 
 }
 
